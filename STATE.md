@@ -42,13 +42,12 @@
 - [x] Puter Token Authentication (Workaround for Cross-Origin Popups): Added a text input field to paste a Puter Auth Token directly, with a direct link to the Puter dashboard. This bypasses Chrome's strict extension security policies that block cross-origin postMessage communications between `https://puter.com` and `chrome-extension://` popups. The token is securely stored and persisted using `chrome.storage.sync`.
 - [x] Output Location Help Labels: Added dynamic sub-labels under the Target AI dropdown that clearly display the output destination of generated content for each selected model (Gemini, ChatGPT, and Puter.js).
 - [x] Compiled & Verified: Rebuilt the extension bundle via `pnpm build` successfully.
-
 - [x] Output Location on Dropdown Options: Restructured the `SelectItem` options in [App.jsx](file:///e:/Antigravity%20imp/AI%20-%20text%20to%20image%20browser%20extension/AI%20Sheet%20Prompter/src/App.jsx) to render output location text directly under each option name. Increased the select dropdown list's maximum height from `160px` to `220px` in [select.jsx](file:///e:/Antigravity%20imp/AI%20-%20text%20to%20image%20browser%20extension/AI%20Sheet%20Prompter/src/components/ui/select.jsx) to display the taller list items cleanly.
 - [x] Custom Output Directory Picker (Direct write to local folders): Integrated `window.showDirectoryPicker()` folder selector, storing directory handles in IndexedDB. Fetching and writing generated images directly to folder handles rather than relying exclusively on chrome downloads. Automatically prompts for authorization on queue start when needed.
 - [x] Puter Image Aspect Ratio Selection: Added a dropdown selector under Puter settings allowing users to choose the target image shape (`1:1`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`). The choice is stored in chrome storage, rendered dynamically inside the custom select component, and parsed as a ratio parameter object options directly inside the Puter image generation queue.
 - [x] Resumable Prompting Progress (Browser Restart Safety): Implemented queue progress serialization in `chrome.storage.local` mapped to `[Sheet URL + Tab]`. Configured the background service worker and frontend Puter.js queue loops to support a starting index parameter. Updated the popup frontend to detect saved progress, render a progress info badge, and display a dual-button configuration (`Start Fresh` and `Resume`).
+- [x] GitHub Publication: Configured a root `.gitignore` to exclude dependencies and nested git repos, initialized and committed the local codebase, and successfully published the repository as public to [@voxelepic/ai-text-to-image-browser-extension](https://github.com/voxelepic/ai-text-to-image-browser-extension).
 
 ## Next Steps
 - Manual testing of the resumable queue flow in the chrome environment.
 - Verify directory selection, aspect ratio, and resumable state in popup / tab.
-
