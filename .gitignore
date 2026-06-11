@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+AI Sheet Prompter/node_modules/
+
+# Inner git repositories to avoid nested repo issues
+antigravity-awesome-skills/
+claudedesignskills/
+
+# Local/secrets
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+AI Sheet Prompter/dist/
+
+# OS/System files
+Thumbs.db
+Desktop.ini

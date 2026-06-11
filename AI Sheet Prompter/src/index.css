@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #0a0b11;
+    --bg-card: #111422;
+    --border-glass: rgba(255, 255, 255, 0.07);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --color-gemini: #7c3aed;
+    --color-chatgpt: #10a37f;
+    --color-puter: #0084ff;
+    --accent-color: var(--color-gemini);
+    --accent-glow: rgba(124, 58, 237, 0.15);
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-normal: 200ms;
+  }
+
+  body.gemini-theme {
+    --accent-color: var(--color-gemini);
+    --accent-glow: rgba(124, 58, 237, 0.15);
+  }
+
+  body.chatgpt-theme {
+    --accent-color: var(--color-chatgpt);
+    --accent-glow: rgba(16, 163, 127, 0.15);
+  }
+
+  body.puter-theme {
+    --accent-color: var(--color-puter);
+    --accent-glow: rgba(0, 132, 255, 0.15);
+  }
+
+  /* Gallery Previews Container */
+  .gallery-container {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-glass);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .gallery-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.2s var(--ease-out-quint), border-color 0.2s var(--ease-out-quint);
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  body {
+    width: 340px;
+    min-height: 420px;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    padding: 12px;
+  }
+
+  /* Custom Scrollbar for Select Content */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Smooth fade-in animate helper */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.2s var(--ease-out-quint) forwards;
+  }
+}
