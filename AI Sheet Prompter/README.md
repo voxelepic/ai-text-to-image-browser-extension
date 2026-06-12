@@ -1,7 +1,7 @@
 # AI Sheet Prompter
 
 <p align="center">
-  <img src="icons/icon.png" alt="AI Sheet Prompter Logo" width="128" height="128">
+  <img src="icons/AI_Sheet_Prompter_Banner.gif" alt="AI Sheet Prompter Banner">
 </p>
 
 <p align="center">

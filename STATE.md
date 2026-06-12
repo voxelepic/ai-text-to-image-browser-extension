@@ -47,6 +47,7 @@
 - [x] Puter Image Aspect Ratio Selection: Added a dropdown selector under Puter settings allowing users to choose the target image shape (`1:1`, `16:9`, `9:16`, `3:2`, `2:3`, `21:9`). The choice is stored in chrome storage, rendered dynamically inside the custom select component, and parsed as a ratio parameter object options directly inside the Puter image generation queue.
 - [x] Resumable Prompting Progress (Browser Restart Safety): Implemented queue progress serialization in `chrome.storage.local` mapped to `[Sheet URL + Tab]`. Configured the background service worker and frontend Puter.js queue loops to support a starting index parameter. Updated the popup frontend to detect saved progress, render a progress info badge, and display a dual-button configuration (`Start Fresh` and `Resume`).
 - [x] GitHub Publication: Configured a root `.gitignore` to exclude dependencies and nested git repos, initialized and committed the local codebase, and successfully published the repository as public to [@voxelepic/ai-text-to-image-browser-extension](https://github.com/voxelepic/ai-text-to-image-browser-extension).
+- [x] README Logo Banner: Replaced the static project logo in the README.md file with the animated GIF banner (`AI_Sheet_Prompter_Banner.gif`).
 
 ## Next Steps
 - Manual testing of the resumable queue flow in the chrome environment.
